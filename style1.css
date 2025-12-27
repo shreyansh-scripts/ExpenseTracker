@@ -28,6 +28,12 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 button:active {
 transform: translateY(0);
 }
+/* Temporary: hide leftover empty button */
+button {
+  background: transparent !important;
+  border: none !important;
+}
+
 /* Table row hover */
 tbody tr {
 transition: background-color 0.2s ease;
