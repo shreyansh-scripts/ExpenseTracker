@@ -34,7 +34,10 @@
       <div class="lg:col-span-2 space-y-6">
         
         <!-- Add Transaction Form -->
-        <section class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+        <section 
+          id="transactionSection"
+          class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
+        >
           <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
             ➕ Add New Transaction
           </h2>
@@ -262,6 +265,7 @@
       addDoc,
       getDocs,
       deleteDoc,
+      updateDoc,
       doc,
       onSnapshot
     } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
@@ -286,6 +290,7 @@ const firebaseConfig = {
     window.addDoc = addDoc;
     window.getDocs = getDocs;
     window.deleteDoc = deleteDoc;
+    window.updateDoc = updateDoc;
     window.doc = doc;
     window.collection = collection;
     window.onSnapshot = onSnapshot;
