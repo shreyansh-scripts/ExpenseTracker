@@ -111,6 +111,21 @@ function validateForm() {
   } else {
     const selectedDate = new Date(date);
     const today = new Date();
+    
+    // 🔑 RESET TIME FOR BOTH DATES
+    selectedDate.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+    
+    if (selectedDate > today) {
+      errors.push("❌ Date cannot be in the future");
+    }
+  }
+
+  if (!date) {
+    errors.push("❌ Please select a date");
+  } else {
+    const selectedDate = new Date(date);
+    const today = new Date();
     today.setHours(0, 0, 0, 0); // Reset time to midnight
     if (selectedDate > today) {
       errors.push("❌ Date cannot be in the future");
