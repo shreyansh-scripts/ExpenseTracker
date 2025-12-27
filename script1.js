@@ -192,8 +192,8 @@ async function addTransaction() {
 
 
     // Show success message
-    alert("✅ Transaction added successfully!");
-
+    // alert("✅ Transaction added successfully!");(commented out as it was showing duplicate popup)
+    
     // Step 6: Reload (onSnapshot will also trigger)
     await loadTransactions();
 
